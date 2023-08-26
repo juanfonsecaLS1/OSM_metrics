@@ -1,0 +1,15 @@
+{
+"type": "FeatureCollection",
+"name": "points_Calderdale",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::27700" } },
+"features": [
+{ "type": "Feature", "properties": { "Site ID": "70301", "Site Name": "A6033 G0301", "Speed Limit": "0", "Description": "A6033 south of Oxenhope", "Latitude": "53.79183", "Orientation": "NE", "Grid": "4.0112E+11", "Longitude": "-1.98448" }, "geometry": { "type": "Point", "coordinates": [ 401119.988647916761693, 432835.233539337408729 ] } },
+{ "type": "Feature", "properties": { "Site ID": "130403", "Site Name": "A629 M0403", "Speed Limit": "0", "Description": "A629 Skircoat Road, Halifax", "Latitude": "53.71619", "Orientation": "N", "Grid": "4.09305E+11", "Longitude": "-1.86047" }, "geometry": { "type": "Point", "coordinates": [ 409306.025417721364647, 424428.484596879337914 ] } },
+{ "type": "Feature", "properties": { "Site ID": "140308", "Site Name": "A629 N0308", "Speed Limit": "0", "Description": "Elland Bypass Link Road to Town Centre", "Latitude": "53.688", "Orientation": "NE", "Grid": "4.1115E+11", "Longitude": "-1.83263" }, "geometry": { "type": "Point", "coordinates": [ 411150.739765371661633, 421296.079120617709123 ] } },
+{ "type": "Feature", "properties": { "Site ID": "140314", "Site Name": "A644 N0314", "Speed Limit": "0", "Description": "A644 Ludenscheid Link Brighouse", "Latitude": "53.70279", "Orientation": "E", "Grid": "4.14417E+11", "Longitude": "-1.78309" }, "geometry": { "type": "Point", "coordinates": [ 414417.374743512191344, 422950.411575804755557 ] } },
+{ "type": "Feature", "properties": { "Site ID": "120101", "Site Name": "A646 L0101", "Speed Limit": "0", "Description": "A646 West of Todmorden", "Latitude": "53.73451", "Orientation": "N", "Grid": "3.89769E+11", "Longitude": "-2.15656" }, "geometry": { "type": "Point", "coordinates": [ 389769.611192278738599, 426469.154074856312945 ] } },
+{ "type": "Feature", "properties": { "Site ID": "130101", "Site Name": "B6138 M0101", "Speed Limit": "0", "Description": "B6138 Cragg Vale, South of Mytholmroyd", "Latitude": "53.71127", "Orientation": "N", "Grid": "4.0065E+11", "Longitude": "-1.99163" }, "geometry": { "type": "Point", "coordinates": [ 400649.983089304238092, 423872.119248103408609 ] } },
+{ "type": "Feature", "properties": { "Site ID": "130422", "Site Name": "UC M0422", "Speed Limit": "0", "Description": "Parkinson Lane, Halifax", "Latitude": "53.71863", "Orientation": "E", "Grid": "4.08402E+11", "Longitude": "-1.87415" }, "geometry": { "type": "Point", "coordinates": [ 408402.71367242775159, 424698.273079055710696 ] } },
+{ "type": "Feature", "properties": { "Site ID": "130427", "Site Name": "UC M0427", "Speed Limit": "0", "Description": "Southowram Bank Top", "Latitude": "53.71746", "Orientation": "NW", "Grid": "4.10361E+11", "Longitude": "-1.84447" }, "geometry": { "type": "Point", "coordinates": [ 410361.660509482142515, 424571.970547232660465 ] } }
+]
+}

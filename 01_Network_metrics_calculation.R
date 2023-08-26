@@ -11,13 +11,16 @@ source("00_main_functions.R")
 # Leeds
 Cam_Locations <- read_csv("https://datamillnorth.org/download/leeds-annual-traffic-growth/9bc51361-d98e-47d3-9963-aeeca3fa0afc/Camera%20Locations.csv",
                           col_types = cols(`Site Name` = col_character(),
-                                           `Site ID` = col_integer(), Description = col_character(),
-                                           Grid = col_double(), X = col_integer(),
-                                           Y = col_integer(), Orientation = col_character()))
+                                           `Site ID` = col_integer(),
+                                           Description = col_character(),
+                                           Grid = col_double(),
+                                           X = col_integer(),
+                                           Y = col_integer(),
+                                           Orientation = col_character()))
 
 sf_locations = st_as_sf(Cam_Locations,coords = c("X","Y"),crs = 27700)
 
-calc_road_metrics(sf_locations,"Leeds")
+calc_road_metrics(sf_locations,data_name = "Leeds")
 
 # Hull
 library(httr)
@@ -68,6 +71,36 @@ sf_locations = Cam_Locations |> st_transform(crs = 27700)
 
 calc_road_metrics(sf_locations,"Bradford")
 
+
+# North Yorkshire data
+Cam_Locations = read_csv("01_data_sets/North York/northyorkshireroadcount.csv") |>
+  select(CP, Region, LocalAuthority, Road, RoadCategory, Easting, Northing)
+
+sf_locations = Cam_Locations |>st_as_sf(coords = c("Easting","Northing"),crs = 27700)
+
+calc_road_metrics(sf_locations,"North Yorkshire")
+
+# Oxfordshire
+Cam_Locations = read_excel("01_data_sets/Oxfordshire/mappedaadt2019.xlsx")
+
+sf_locations = Cam_Locations |>st_as_sf(coords = c("Easting","Northing"),crs = 27700)
+
+calc_road_metrics(sf_locations,"Oxfordshire")
+
+# Brighton and Hove
+Cam_Locations = st_read("01_data_sets/Brighton & Hove/Brighton & Hove Automatic Traffic Counters.kml")
+
+sf_locations = Cam_Locations |> st_transform(crs=27700)
+
+calc_road_metrics(sf_locations,data_name = "Brighton & Hove")
+
+# West Midlands
+Cam_Locations = geojsonsf::geojson_sf("01_data_sets/West Midlands/westmids_traffic_counting_classification_rtem_geom.json")
+
+sf_locations = Cam_Locations |> st_transform(crs=27700)
+
+calc_road_metrics(sf_locations,data_name = "West Midlands")
+
 # webTRIS
 
 install.packages('devtools')
@@ -79,9 +112,4 @@ sf_locations = webtris_sites(sf = T) |>
   st_transform(crs = 27700)
 
 calc_road_metrics(sf_locations,"National Highways")
-
-# North Yorkshire data
-
-
-# Oxfordshire
 
